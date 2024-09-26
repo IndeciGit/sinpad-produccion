@@ -1,1 +1,8 @@
-x
+---
+- hosts: Bastions_Servers
+  become: false
+  tasks:
+    - name: Desplegando el servicio
+      shell: |
+        echo "Desplegando Emergencia Service"
+        /opt/sinpad/prod/scripts/deployemergenciaservice.sh
