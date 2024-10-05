@@ -1,0 +1,8 @@
+---
+- hosts: Bastions_Servers
+  become: false
+  tasks:
+    - name: Reset Pods Emergencia
+      shell: |
+        echo "Reset Pods Emergencia"
+        /opt/sinpad/prod/scripts/resetpods.sh eme
